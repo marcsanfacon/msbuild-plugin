@@ -96,8 +96,8 @@ public class MsBuildBuilder extends Builder {
             args.add(pathToMsBuild);
         }
 
-        if (ai.getDefaultargs() != "") {
-            args.add(ai.getDefaultargs());
+        if (ai.getDefaultArgs() != "") {
+            args.add(ai.getDefaultArgs());
         }
 
         EnvVars env = build.getEnvironment(listener);

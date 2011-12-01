@@ -32,14 +32,14 @@ public final class MsBuildInstallation extends ToolInstallation implements NodeS
     }
 
     public MsBuildInstallation forNode(Node node, TaskListener log) throws IOException, InterruptedException {
-        return new MsBuildInstallation(getName(), translateFor(node, log), getDefaultargs());
+        return new MsBuildInstallation(getName(), translateFor(node, log), getDefaultArgs());
     }
 
     public MsBuildInstallation forEnvironment(EnvVars environment) {
-        return new MsBuildInstallation(getName(), environment.expand(getHome()), getDefaultargs());
+        return new MsBuildInstallation(getName(), environment.expand(getHome()), getDefaultArgs());
     }
 
-    public String getDefaultargs() {
+    public String getDefaultArgs() {
         return this.defaultArgs;
     }
 
